@@ -33,6 +33,10 @@ body {
   font-size: 18px;
 }
 
+.img-logo{
+  height: 50px;
+  width: 50px;
+}
 .nav-links {
   list-style: none;
   display: flex;
