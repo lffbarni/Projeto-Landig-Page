@@ -1,3 +1,4 @@
+/* ====== RESET ====== */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ body {
   background-color: #fff;
 }
 
-/* NAVBAR */
+/* ====== NAVBAR ====== */
 .navbar {
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
@@ -33,10 +34,11 @@ body {
   font-size: 18px;
 }
 
-.img-logo{
+.img-logo {
   height: 70px;
   width: 70px;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -49,7 +51,24 @@ body {
   font-weight: 500;
 }
 
-/* SOBRE NÓS */
+/* ====== IMAGENS E HOVER ====== */
+.img-placeholder {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.img-placeholder:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-color: #ffbb00;
+}
+
+/* ====== SEÇÕES ====== */
 .sobre {
   display: flex;
   align-items: center;
@@ -63,34 +82,20 @@ body {
   gap: 40px;
 }
 
-.img-placeholder {
-    width: 220px;              
-    height: 220px;
-    object-fit: cover;         
-    border-radius: 15px;       
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease;  
-    border: 3px solid #f5f5f5;  
-  }
-
-  .img-placeholder:hover {
-    transform: scale(1.05);             
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
-    border-color: #ffbb00;              
-  }
-
 .texto h2 {
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-/* SERVIÇOS */
-.servicos {
+/* ====== CARDS ====== */
+.servicos,
+.contatos {
   text-align: center;
   padding: 60px 0;
 }
 
-.servicos .cards {
+.servicos .cards,
+.contatos .cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -103,16 +108,20 @@ body {
   border-radius: 8px;
   padding: 20px;
   width: 250px;
-  transition: 0.2s;
+  transition: 0.3s;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .card .icon {
   font-size: 30px;
   margin-bottom: 10px;
+  color: #007BFF;
 }
 
 .card a {
@@ -122,7 +131,7 @@ body {
   text-decoration: none;
 }
 
-/* FOOTER */
+/* ====== FOOTER ====== */
 footer {
   background-color: #f5f5f5;
   padding: 40px 0 20px;
@@ -178,32 +187,15 @@ footer {
   text-decoration: none;
 }
 
-/* ========= RESPONSIVIDADE ========= */
-
-/* Tablets */
+/* ====== RESPONSIVIDADE ====== */
 @media (max-width: 900px) {
   .sobre-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .img-placeholder {
-    width: 220px;              
-    height: 220px;
-    object-fit: cover;         
-    border-radius: 15px;       
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease;  
-    border: 3px solid #f5f5f5;  
-  }
-
-  .img-placeholder:hover {
-    transform: scale(1.05);             
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
-    border-color: #ffbb00;              
-  }
-
-  .servicos .cards {
+  .servicos .cards,
+  .contatos .cards {
     flex-direction: column;
     align-items: center;
   }
@@ -214,7 +206,6 @@ footer {
   }
 }
 
-/* Celulares */
 @media (max-width: 600px) {
   .nav-container {
     flex-direction: column;
@@ -251,51 +242,3 @@ footer {
     font-size: 12px;
   }
 }
-
-/* ====== CONTATOS ====== */
-.contatos {
-  text-align: center;
-  padding: 60px 0;
-  background-color: #fafafa;
-  border-top: 1px solid #ddd;
-}
-
-.contatos h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.contatos .descricao {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.contatos .cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.contatos .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  width: 250px;
-  transition: 0.3s;
-  cursor: pointer;
-  background-color: #fff;
-}
-
-.contatos .card:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  transform: translateY(-5px);
-}
-
-.contatos .icon {
-  font-size: 36px;
-  margin-bottom: 10px;
-  color: #007BFF;
-}
-
